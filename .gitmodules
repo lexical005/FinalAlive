@@ -1,0 +1,3 @@
+[submodule "Other/FairyGUI-unity"]
+	path = Other/FairyGUI-unity
+	url = https://github.com/lexical005/FairyGUI-unity.git
