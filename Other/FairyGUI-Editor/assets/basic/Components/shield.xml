@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1280,720">
+  <displayList>
+    <graph id="n0_rzie" name="shield" xy="0,0" size="1280,720" type="rect" lineSize="0" lineColor="#00000000" fillColor="#00ffffff"/>
+  </displayList>
+  <transition name="fadein" options="1">
+    <item time="0" type="Alpha" target="n0_rzie" tween="true" startValue="0" endValue="1" duration="18" ease="Linear"/>
+    <item time="0" type="Color" target="n0_rzie" tween="true" startValue="#000000" endValue="#000000" duration="18" ease="Linear"/>
+  </transition>
+  <transition name="fadeout" options="1">
+    <item time="0" type="Alpha" target="n0_rzie" tween="true" startValue="1" endValue="0" duration="18" ease="Linear"/>
+    <item time="0" type="Color" target="n0_rzie" tween="true" startValue="#000000" endValue="#000000" duration="18" ease="Linear"/>
+  </transition>
+</component>

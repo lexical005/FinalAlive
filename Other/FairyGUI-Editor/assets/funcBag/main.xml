@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1280,720">
+  <displayList>
+    <component id="n1_q8mz" name="frame" src="iuhe3z" pkg="iy83z0ow" xy="0,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Label title="背包"/>
+    </component>
+  </displayList>
+</component>

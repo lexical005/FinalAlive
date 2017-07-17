@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1280,720" opaque="false">
+  <displayList>
+    <component id="n1_t2ni" name="loading" src="t2ni49" pkg="iy83z0ow" xy="352,562">
+      <relation target="" sidePair="center-center"/>
+      <ProgressBar max="100"/>
+    </component>
+  </displayList>
+</component>

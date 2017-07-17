@@ -1,0 +1,17 @@
+{
+	"textColor": "#000000",
+	"fontSizeScheme": [
+		"大按钮 50"
+	],
+	"font": "隶书",
+	"fontSize": 16,
+	"scrollBars": {
+		"horizontal": "",
+		"defaultDisplay": "visible",
+		"vertical": ""
+	},
+	"colorScheme": [
+		"标准白色 #FFFFFF",
+		"标准红色 #FF0000"
+	]
+}

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1280,720">
+  <controller name="page" pages="0,,1," selected="0"/>
+  <displayList>
+    <text id="n17_el7u" name="tip" xy="56,141" pivot="0.5,0.5" size="1167,34" fontSize="30" color="#ffffff" align="center" ubb="true" autoSize="none" text="请输入账号密码以登陆">
+      <relation target="" sidePair="top-top,center-center"/>
+    </text>
+    <component id="n9_el7u" name="login" src="el7u45" pkg="iy83z0ow" xy="544,483" pivot="0.5,0.5" group="n16_el7u">
+      <Button title="登陆"/>
+    </component>
+    <graph id="n10_el7u" name="n10" xy="565,404" size="244,34" group="n16_el7u" type="rect" fillColor="#ff666666"/>
+    <graph id="n11_el7u" name="n11" xy="565,361" size="244,34" group="n16_el7u" type="rect" fillColor="#ff666666"/>
+    <text id="n12_el7u" name="n12" xy="471,361" size="65,34" group="n16_el7u" fontSize="30" color="#ffffff" text="账号"/>
+    <text id="n13_el7u" name="n13" xy="470,403" size="65,34" group="n16_el7u" fontSize="30" color="#ffffff" text="密码"/>
+    <text id="n14_el7u" name="account" xy="565,361" size="244,34" group="n16_el7u" input="true" prompt="[i][color=#999999]请输入账号[/color][/i]" maxLength="16" fontSize="30" color="#ffffff" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <text id="n15_el7u" name="password" xy="565,404" size="244,34" group="n16_el7u" input="true" prompt="[i][color=#999999]请输入密码[/color][/i]" maxLength="16" password="true" fontSize="30" color="#ffffff" vAlign="middle" autoSize="none" singleLine="true" text=""/>
+    <group id="n16_el7u" name="n16" xy="470,361" size="339,207" advanced="true" collapsed="true">
+      <gearDisplay controller="page" pages="0"/>
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </group>
+    <component id="n18_el7u" name="enter" src="el7u45" pkg="iy83z0ow" xy="544,483" pivot="0.5,0.5" group="n25_el7u">
+      <Button title="进入游戏" titleFontSize="36"/>
+    </component>
+    <group id="n25_el7u" name="n25" xy="544,483" size="192,85" advanced="true" collapsed="true">
+      <gearDisplay controller="page" pages="1"/>
+      <relation target="" sidePair="center-center,bottom-bottom"/>
+    </group>
+  </displayList>
+</component>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="154,98" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n2_iuhe" name="icon" src="ffsp3w" xy="0,0">
+      <gearDisplay controller="button" pages="0"/>
+    </image>
+    <image id="n3_iuhe" name="icon" src="ffsp3x" xy="0,0">
+      <gearDisplay controller="button" pages="1"/>
+    </image>
+    <text id="n0_ffsp" name="title" xy="23,22" pivot="0.5,0.5" size="105,54" font="隶书" fontSize="50" color="#00ff00" align="center" vAlign="middle" strokeColor="#000000" text="按钮">
+      <gearColor controller="button" pages="0,1" values="#00ff00,#000000|#ffffff,#000000"/>
+    </text>
+  </displayList>
+  <Button/>
+</component>

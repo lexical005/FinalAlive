@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="192,85" pivot="0.5,0.5" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="1"/>
+  <displayList>
+    <image id="n0_el7u" name="icon" src="lkor1j" xy="0,0" pivot="0.5,0.5">
+      <gearDisplay controller="button" pages="0"/>
+    </image>
+    <image id="n2_el7u" name="icon" src="lkor1i" xy="0,0">
+      <gearDisplay controller="button" pages="1"/>
+    </image>
+    <text id="n1_el7u" name="title" xy="43,15" pivot="0.5,0.5" size="105,54" fontSize="50" color="#ffffff" align="center" vAlign="middle" strokeColor="#000000" text="按钮"/>
+  </displayList>
+  <Button/>
+</component>

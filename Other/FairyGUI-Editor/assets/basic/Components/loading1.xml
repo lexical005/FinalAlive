@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="577,59" extention="ProgressBar">
+  <displayList>
+    <image id="n1_t2ni" name="n1" src="t2ni48" xy="51,26" size="470,16" grayed="true"/>
+    <image id="n3_t2ni" name="bar" src="t2ni48" xy="51,25" size="470,16"/>
+    <image id="n0_t2ni" name="n0" src="t2ni47" xy="1,0"/>
+    <image id="n2_t2ni" name="n2" src="t2ni47" xy="489,2" flip="hz"/>
+    <loader id="n7_t2ni" name="n7" xy="461,-34" size="128,128" url="ui://iy83z0owiuhe3y">
+      <relation target="n3_t2ni" sidePair="right-right"/>
+    </loader>
+    <text id="n8_t2ni" name="title" xy="256,-3" size="65,34" fontSize="30" color="#ffffff" text="100%"/>
+  </displayList>
+  <ProgressBar/>
+</component>

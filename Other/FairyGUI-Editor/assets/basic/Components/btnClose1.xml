@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="76,57" extention="Button">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n0_iuhe" name="icon" src="lkor1k" xy="0,0" pivot="0.5,0.5">
+      <gearDisplay controller="button" pages="0,1"/>
+      <gearSize controller="button" default="76,57,1,1" tween="true"/>
+    </image>
+  </displayList>
+  <Button/>
+</component>

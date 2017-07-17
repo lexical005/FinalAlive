@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1280,720" opaque="false">
+  <displayList>
+    <component id="n6_c607" name="role" src="c60743" pkg="iy83z0ow" xy="100,622">
+      <relation target="" sidePair="bottom-bottom,left-left"/>
+      <Button title="角色"/>
+    </component>
+    <component id="n7_c607" name="bag" src="c60743" pkg="iy83z0ow" xy="253,622">
+      <relation target="" sidePair="bottom-bottom,left-left"/>
+      <Button title="背包"/>
+    </component>
+    <component id="n8_c607" name="weapon" src="c60743" pkg="iy83z0ow" xy="864,622">
+      <relation target="" sidePair="bottom-bottom,right-right"/>
+      <Button title="武器"/>
+    </component>
+    <component id="n9_c607" name="pet" src="c60743" pkg="iy83z0ow" xy="1018,622">
+      <relation target="" sidePair="bottom-bottom,right-right"/>
+      <Button title="宠物"/>
+    </component>
+    <component id="n10_gm03" name="battle" src="c60743" pkg="iy83z0ow" xy="563,622">
+      <relation target="" sidePair="bottom-bottom,center-center"/>
+      <Button title="战斗"/>
+    </component>
+  </displayList>
+</component>

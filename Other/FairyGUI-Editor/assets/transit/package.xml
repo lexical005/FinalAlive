@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="45zlubrm" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="rzie0" name="main.xml" path="/" exported="true"/>
+  </resources>
+  <publish name="transit" genCode="true"/>
+</packageDescription>

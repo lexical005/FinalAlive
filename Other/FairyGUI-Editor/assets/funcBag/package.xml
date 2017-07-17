@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="fdzfwyaa" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="c6070" name="main.xml" path="/" exported="true"/>
+  </resources>
+  <publish name="funcBag" genCode="true"/>
+</packageDescription>

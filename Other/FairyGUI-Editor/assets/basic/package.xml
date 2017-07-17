@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="iy83z0ow" jpegQuality="80" compressPNG="true">
+  <resources>
+    <image id="lkor1i" name="button_bg_rect_hit.png" path="/Resources/Sprites/Button/" exported="true"/>
+    <image id="lkor1j" name="button_bg_rect_normal.png" path="/Resources/Sprites/Button/" exported="true"/>
+    <image id="lkor1k" name="button_bg_red_close.png" path="/Resources/Sprites/Button/" exported="true"/>
+    <image id="u6rk1l" name="background_1.png" path="/Resources/Textures/" exported="true" scale="9grid" scale9grid="65,145,481,110" atlas="alone_npot"/>
+    <image id="u6rk1m" name="LAZY_LOAD_equip_01.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk1n" name="LAZY_LOAD_equip_02.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk1o" name="LAZY_LOAD_equip_03.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk1p" name="LAZY_LOAD_equip_04.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk1q" name="LAZY_LOAD_equip_05.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk1r" name="LAZY_LOAD_equip_06.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk1s" name="LAZY_LOAD_equip_07.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk1t" name="LAZY_LOAD_equip_08.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk1u" name="LAZY_LOAD_equip_09.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk1v" name="LAZY_LOAD_equip_10.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk1w" name="LAZY_LOAD_equip_11.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk1x" name="LAZY_LOAD_equip_12.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk1y" name="LAZY_LOAD_equip_13.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk1z" name="LAZY_LOAD_equip_14.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk20" name="LAZY_LOAD_equip_15.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk21" name="LAZY_LOAD_equip_16.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk22" name="LAZY_LOAD_equip_17.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk23" name="LAZY_LOAD_equip_18.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk24" name="LAZY_LOAD_equip_19.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk25" name="LAZY_LOAD_equip_20.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk26" name="LAZY_LOAD_equip_21.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk27" name="LAZY_LOAD_equip_22.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk28" name="LAZY_LOAD_equip_23.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk29" name="LAZY_LOAD_equip_24.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2a" name="LAZY_LOAD_equip_25.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2b" name="LAZY_LOAD_equip_26.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2c" name="LAZY_LOAD_equip_27.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2d" name="LAZY_LOAD_equip_28.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2e" name="LAZY_LOAD_equip_29.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2f" name="LAZY_LOAD_equip_30.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2g" name="LAZY_LOAD_equip_31.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2h" name="LAZY_LOAD_equip_32.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2i" name="LAZY_LOAD_equip_33.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2j" name="LAZY_LOAD_equip_34.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2k" name="LAZY_LOAD_equip_35.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2l" name="LAZY_LOAD_equip_36.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2m" name="LAZY_LOAD_equip_37.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2n" name="LAZY_LOAD_equip_38.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2o" name="LAZY_LOAD_equip_39.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2p" name="LAZY_LOAD_equip_40.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2q" name="LAZY_LOAD_equip_41.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2r" name="LAZY_LOAD_equip_42.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2s" name="LAZY_LOAD_equip_43.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2t" name="LAZY_LOAD_equip_44.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2u" name="LAZY_LOAD_equip_45.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2v" name="LAZY_LOAD_equip_46.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2w" name="LAZY_LOAD_equip_47.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2x" name="LAZY_LOAD_equip_48.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2y" name="LAZY_LOAD_equip_49.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk2z" name="LAZY_LOAD_equip_50.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk30" name="LAZY_LOAD_equip_51.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk31" name="LAZY_LOAD_equip_52.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk32" name="LAZY_LOAD_equip_53.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk33" name="LAZY_LOAD_equip_54.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk34" name="LAZY_LOAD_equip_55.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk35" name="LAZY_LOAD_equip_56.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk36" name="LAZY_LOAD_equip_57.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk37" name="LAZY_LOAD_equip_58.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk38" name="LAZY_LOAD_equip_59.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk39" name="ICON_FRAME.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk3a" name="LAZY_LOAD_buff_locked03_00.png" path="/Resources/SpriteSequence/Sequence1/"/>
+    <image id="u6rk3b" name="LAZY_LOAD_buff_locked03_01.png" path="/Resources/SpriteSequence/Sequence1/"/>
+    <image id="u6rk3c" name="LAZY_LOAD_buff_locked03_02.png" path="/Resources/SpriteSequence/Sequence1/"/>
+    <image id="u6rk3d" name="LAZY_LOAD_buff_locked03_03.png" path="/Resources/SpriteSequence/Sequence1/"/>
+    <image id="u6rk3e" name="LAZY_LOAD_buff_locked03_04.png" path="/Resources/SpriteSequence/Sequence1/"/>
+    <image id="u6rk3f" name="LAZY_LOAD_buff_locked03_05.png" path="/Resources/SpriteSequence/Sequence1/"/>
+    <image id="u6rk3g" name="LAZY_LOAD_buff_locked03_06.png" path="/Resources/SpriteSequence/Sequence1/"/>
+    <image id="u6rk3h" name="LAZY_LOAD_buff_locked03_07.png" path="/Resources/SpriteSequence/Sequence1/"/>
+    <image id="u6rk3i" name="commander_upgrade_1201.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk3j" name="commander_upgrade_1202.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk3k" name="commander_upgrade_1203.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk3l" name="commander_upgrade_1204.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk3m" name="commander_upgrade_1205.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk3n" name="commander_upgrade_1206.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk3o" name="commander_upgrade_1211.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk3p" name="commander_upgrade_1212.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk3q" name="commander_upgrade_1213.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk3r" name="commander_upgrade_1214.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk3s" name="commander_upgrade_1215.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk3t" name="commander_upgrade_1216.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <image id="u6rk3u" name="commander_upgrade_1217.png" path="/Resources/Icons/" exported="true" atlas="1"/>
+    <component id="ffsp3v" name="hudHomeBtn1.xml" path="/Components/" exported="true"/>
+    <image id="ffsp3w" name="button_bg_hexagon_normal.png" path="/Resources/Sprites/Button/" exported="true"/>
+    <image id="ffsp3x" name="button_bg_hexagon_hit.png" path="/Resources/Sprites/Button/" exported="true"/>
+    <movieclip id="iuhe3y" name="flash1.jta" path="/Resources/SpriteSequence/Sequence1/" exported="true"/>
+    <component id="iuhe3z" name="windowFrame1.xml" path="/Components/" exported="true"/>
+    <component id="iuhe40" name="btnClose1.xml" path="/Components/" exported="true"/>
+    <component id="c60743" name="hudHomeBtn2.xml" path="/Components/" exported="true"/>
+    <component id="c60744" name="empty.xml" path="/Components/" exported="true"/>
+    <component id="el7u45" name="btnNormal1.xml" path="/Components/" exported="true"/>
+    <component id="rzie46" name="shield.xml" path="/Components/" exported="true"/>
+    <image id="t2ni47" name="loading_huawen.png" path="/Resources/Sprites/Loading/" exported="true"/>
+    <image id="t2ni48" name="loading_progress.png" path="/Resources/Sprites/Loading/" exported="true"/>
+    <component id="t2ni49" name="loading1.xml" path="/Components/" exported="true"/>
+  </resources>
+  <publish name="basic" genCode="true" extractAlpha="true">
+    <atlas name="默认" index="0"/>
+    <atlas name="icon" index="1"/>
+  </publish>
+</packageDescription>

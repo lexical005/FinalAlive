@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="dnyqgmof" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="el7u0" name="main.xml" path="/" exported="true"/>
+  </resources>
+  <publish name="hudLogin" genCode="true"/>
+</packageDescription>

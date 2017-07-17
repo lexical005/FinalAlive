@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1280,720" extention="Label" initName="frame">
+  <controller name="button" pages="0,up,1,down" selected="0"/>
+  <displayList>
+    <image id="n0_iuhe" name="n0" src="u6rk1l" xy="332,166"/>
+    <component id="n2_iuhe" name="btnClose" src="iuhe40" xy="826,163"/>
+    <text id="n3_tvd3" name="title" xy="377,171" pivot="0.5,0.5" size="516,37" fontSize="32" color="#ffffff" align="center" vAlign="middle" autoSize="height" text="窗口标题"/>
+  </displayList>
+</component>
