@@ -5,9 +5,9 @@ using FairyGUI.Utils;
 
 namespace NUIExport.funcBag
 {
-	public class UI_main : GComponent
+	public partial class UI_main : GComponent
 	{
-		public GComponent m_frame;
+		public GLabel m_frame;
 
 		public const string URL = "ui://fdzfwyaac6070";
 
@@ -24,7 +24,7 @@ namespace NUIExport.funcBag
 		{
 			base.ConstructFromXML(xml);
 
-			m_frame = (GComponent)this.GetChildAt(0);
+			m_frame = (GLabel)this.GetChildAt(0);
 		}
 	}
 }

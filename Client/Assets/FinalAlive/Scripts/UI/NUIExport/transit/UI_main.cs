@@ -5,9 +5,9 @@ using FairyGUI.Utils;
 
 namespace NUIExport.transit
 {
-	public class UI_main : GComponent
+	public partial class UI_main : GComponent
 	{
-		public GComponent m_loading;
+		public GProgressBar m_loading;
 
 		public const string URL = "ui://45zlubrmrzie0";
 
@@ -24,7 +24,7 @@ namespace NUIExport.transit
 		{
 			base.ConstructFromXML(xml);
 
-			m_loading = (GComponent)this.GetChildAt(0);
+			m_loading = (GProgressBar)this.GetChildAt(0);
 		}
 	}
 }

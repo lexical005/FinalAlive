@@ -5,14 +5,14 @@ using FairyGUI.Utils;
 
 namespace NUIExport.hudLogin
 {
-	public class UI_main : GComponent
+	public partial class UI_main : GComponent
 	{
 		public FairyGUI.Controller m_page;
 		public GTextField m_tip;
-		public GComponent m_login;
+		public GButton m_login;
 		public GTextInput m_account;
 		public GTextInput m_password;
-		public GComponent m_enter;
+		public GButton m_enter;
 
 		public const string URL = "ui://dnyqgmofel7u0";
 
@@ -31,10 +31,10 @@ namespace NUIExport.hudLogin
 
 			m_page = this.GetControllerAt(0);
 			m_tip = (GTextField)this.GetChildAt(0);
-			m_login = (GComponent)this.GetChildAt(1);
+			m_login = (GButton)this.GetChildAt(1);
 			m_account = (GTextInput)this.GetChildAt(6);
 			m_password = (GTextInput)this.GetChildAt(7);
-			m_enter = (GComponent)this.GetChildAt(9);
+			m_enter = (GButton)this.GetChildAt(9);
 		}
 	}
 }

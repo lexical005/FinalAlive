@@ -5,12 +5,13 @@ using FairyGUI.Utils;
 
 namespace NUIExport.hudHome
 {
-	public class UI_main : GComponent
+	public partial class UI_main : GComponent
 	{
-		public GComponent m_role;
-		public GComponent m_bag;
-		public GComponent m_weapon;
-		public GComponent m_pet;
+		public GButton m_role;
+		public GButton m_bag;
+		public GButton m_weapon;
+		public GButton m_pet;
+		public GButton m_battle;
 
 		public const string URL = "ui://deuco6u9iuhe0";
 
@@ -27,10 +28,11 @@ namespace NUIExport.hudHome
 		{
 			base.ConstructFromXML(xml);
 
-			m_role = (GComponent)this.GetChildAt(0);
-			m_bag = (GComponent)this.GetChildAt(1);
-			m_weapon = (GComponent)this.GetChildAt(2);
-			m_pet = (GComponent)this.GetChildAt(3);
+			m_role = (GButton)this.GetChildAt(0);
+			m_bag = (GButton)this.GetChildAt(1);
+			m_weapon = (GButton)this.GetChildAt(2);
+			m_pet = (GButton)this.GetChildAt(3);
+			m_battle = (GButton)this.GetChildAt(4);
 		}
 	}
 }

@@ -1,4 +1,4 @@
-iuhe0.xml|849|<component size="1280,720" opaque="false">
+iuhe0.xml|1043|<component size="1280,720" opaque="false">
   <displayList>
     <component id="n6_c607" name="role" src="c60743" pkg="iy83z0ow" xy="100,622">
       <relation target="" sidePair="bottom-bottom,left-left"/>
@@ -15,6 +15,10 @@ iuhe0.xml|849|<component size="1280,720" opaque="false">
     <component id="n9_c607" name="pet" src="c60743" pkg="iy83z0ow" xy="1018,622">
       <relation target="" sidePair="bottom-bottom,right-right"/>
       <Button title="宠物"/>
+    </component>
+    <component id="n10_gm03" name="battle" src="c60743" pkg="iy83z0ow" xy="563,622">
+      <relation target="" sidePair="bottom-bottom,right-right"/>
+      <Button title="战斗"/>
     </component>
   </displayList>
 </component>package.xml|181|<packageDescription id="deuco6u9" name="hudHome">
