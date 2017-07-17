@@ -1,0 +1,12 @@
+c6070.xml|262|<component size="1280,720">
+  <displayList>
+    <component id="n1_q8mz" name="frame" src="iuhe3z" pkg="iy83z0ow" xy="0,0">
+      <relation target="" sidePair="center-center,middle-middle"/>
+      <Label title="背包"/>
+    </component>
+  </displayList>
+</component>package.xml|181|<packageDescription id="fdzfwyaa" name="funcBag">
+  <resources>
+    <component id="c6070" name="main" path="/" size="1280,720" exported="true"/>
+  </resources>
+</packageDescription>

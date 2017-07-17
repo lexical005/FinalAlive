@@ -1,0 +1,11 @@
+el7u0.xml|228|<component size="1280,720">
+  <displayList>
+    <image id="n0_el7u" name="n0" src="u6rk1m" pkg="iy83z0ow" xy="1172,612">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+    </image>
+  </displayList>
+</component>package.xml|183|<packageDescription id="d39c1qv4" name="hudBattle">
+  <resources>
+    <component id="el7u0" name="main" path="/" size="1280,720" exported="true"/>
+  </resources>
+</packageDescription>

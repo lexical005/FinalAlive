@@ -1,0 +1,24 @@
+iuhe0.xml|849|<component size="1280,720" opaque="false">
+  <displayList>
+    <component id="n6_c607" name="role" src="c60743" pkg="iy83z0ow" xy="100,622">
+      <relation target="" sidePair="bottom-bottom,left-left"/>
+      <Button title="角色"/>
+    </component>
+    <component id="n7_c607" name="bag" src="c60743" pkg="iy83z0ow" xy="253,622">
+      <relation target="" sidePair="bottom-bottom,left-left"/>
+      <Button title="背包"/>
+    </component>
+    <component id="n8_c607" name="weapon" src="c60743" pkg="iy83z0ow" xy="864,622">
+      <relation target="" sidePair="bottom-bottom,right-right"/>
+      <Button title="武器"/>
+    </component>
+    <component id="n9_c607" name="pet" src="c60743" pkg="iy83z0ow" xy="1018,622">
+      <relation target="" sidePair="bottom-bottom,right-right"/>
+      <Button title="宠物"/>
+    </component>
+  </displayList>
+</component>package.xml|181|<packageDescription id="deuco6u9" name="hudHome">
+  <resources>
+    <component id="iuhe0" name="main" path="/" size="1280,720" exported="true"/>
+  </resources>
+</packageDescription>
