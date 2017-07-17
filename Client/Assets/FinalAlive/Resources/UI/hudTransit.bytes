@@ -1,0 +1,11 @@
+package.xml|184|<packageDescription id="45zlubrm" name="hudTransit">
+  <resources>
+    <component id="rzie0" name="main" path="/" size="1280,720" exported="true"/>
+  </resources>
+</packageDescription>rzie0.xml|201|<component size="1280,720">
+  <displayList>
+    <component id="n1_t2ni" name="n1" src="t2ni49" pkg="iy83z0ow" xy="352,562">
+      <ProgressBar max="100"/>
+    </component>
+  </displayList>
+</component>
