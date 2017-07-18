@@ -2,8 +2,9 @@ package.xml|181|<packageDescription id="45zlubrm" name="transit">
   <resources>
     <component id="rzie0" name="main" path="/" size="1280,720" exported="true"/>
   </resources>
-</packageDescription>rzie0.xml|274|<component size="1280,720" opaque="false">
+</packageDescription>rzie0.xml|382|<component size="1280,720" opaque="false">
   <displayList>
+    <graph id="n2_h0hy" name="n2" xy="0,0" size="1280,720" type="rect" lineSize="0" fillColor="#ff000000"/>
     <component id="n1_t2ni" name="loading" src="t2ni49" pkg="iy83z0ow" xy="352,562">
       <relation target="" sidePair="center-center"/>
       <ProgressBar max="100"/>

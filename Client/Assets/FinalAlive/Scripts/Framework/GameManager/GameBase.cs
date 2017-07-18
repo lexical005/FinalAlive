@@ -8,7 +8,7 @@ namespace NGame
     /// <summary>
     /// 游戏逻辑基类
     /// </summary>
-    public class GameBase
+    public abstract class GameBase
     {
         protected readonly GameType m_GameType;
 
@@ -16,6 +16,12 @@ namespace NGame
         {
             this.m_GameType = _GameType;
         }
+
+        /// <summary>
+        /// 场景名称
+        /// </summary>
+        /// <returns></returns>
+        public abstract string SceneName();
 
         /// <summary>
         /// 预加载Game相关的资源

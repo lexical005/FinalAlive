@@ -6,11 +6,11 @@ using UnityEngine;
 namespace NGame
 {
     /// <summary>
-    /// 主城游戏逻辑
+    /// PVP1游戏逻辑
     /// </summary>
-    public class GameHome : GameBase
+    public class GameBattlePVP1 : GameBase
     {
-        public GameHome(GameType gameType, object gameParam) : base(gameType)
+        public GameBattlePVP1(GameType gameType, object gameParam) : base(gameType)
         {
         }
 
@@ -20,7 +20,7 @@ namespace NGame
         /// <returns></returns>
         public override string SceneName()
         {
-            return "Scene-Home";
+            return "Scene-Battle-PVP1";
         }
 
         /// <summary>
@@ -30,7 +30,7 @@ namespace NGame
         {
             base.OnStart();
 
-            NFramework.UIManager.ShowHUD(UIHudHome.CreateInstance());
+            NFramework.UIManager.ShowHUD(UIHudBattlePVP1.CreateInstance());
         }
     }
 }

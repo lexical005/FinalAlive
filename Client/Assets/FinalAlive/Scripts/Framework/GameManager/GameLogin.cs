@@ -10,8 +10,17 @@ namespace NGame
     /// </summary>
     public class GameLogin : GameBase
     {
-        public GameLogin(object gameParam) : base(new GameTypeLogin())
+        public GameLogin(GameType gameType, object gameParam) : base(gameType)
         {
+        }
+
+        /// <summary>
+        /// 场景名称
+        /// </summary>
+        /// <returns></returns>
+        public override string SceneName()
+        {
+            return "Scene-Login";
         }
 
         /// <summary>

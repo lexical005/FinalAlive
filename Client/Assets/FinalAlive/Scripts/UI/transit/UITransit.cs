@@ -93,7 +93,7 @@ public class UITransit : UIWindowTemplate<UITransit, NUIExport.transit.UI_main>
         {
             m_Status = ETransitStatus.AysncLoad;
 
-            m_AsyncLoadScene = SceneManager.LoadSceneAsync("Scene-Home", LoadSceneMode.Single);
+            m_AsyncLoadScene = SceneManager.LoadSceneAsync(m_TargetGame.SceneName(), LoadSceneMode.Single);
         }
         else if (m_Status == ETransitStatus.AysncLoad)
         {

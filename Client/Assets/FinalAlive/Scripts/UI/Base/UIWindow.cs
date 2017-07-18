@@ -58,7 +58,7 @@ public class UIWindow : FairyGUI.Window
     /// </summary>
     override public void Dispose()
     {
-        Debug.Log("Dispose");
+        Debug.LogFormat("{0} Dispose", name);
 
         base.Dispose();
     }

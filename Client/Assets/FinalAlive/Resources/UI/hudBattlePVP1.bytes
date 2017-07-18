@@ -1,0 +1,30 @@
+el7u0.xml|262|<component size="1280,720">
+  <displayList>
+    <component id="n1_h0hy" name="leftJoystick" src="h0hy3" xy="0,0" size="640,720"/>
+    <component id="n2_h0hy" name="rightJoystick" src="h0hy3" xy="1277,0" size="640,720" scale="-1,1"/>
+  </displayList>
+</component>h0hy3.xml|311|<component size="400,400">
+  <displayList>
+    <image id="n0_h0hy" name="joystick_center" src="h0hy1" xy="181,180" pivot="0.5,0.5" size="38,39">
+      <relation target="" sidePair="bottom-bottom"/>
+    </image>
+    <component id="n3_h0hy" name="joystick" src="h0hy4" xy="155,160"/>
+  </displayList>
+</component>h0hy4.xml|354|<component size="89,80" extention="Button">
+  <controller name="button" pages="0,up,1,down,2,over,3,selectedOver" selected="0"/>
+  <displayList>
+    <image id="n0_h0hy" name="circle" src="h0hy2" xy="0,0" pivot="0.5,0.5" size="89,80">
+      <gearDisplay controller="button" pages="1,3"/>
+    </image>
+  </displayList>
+  <Button mode="Radio"/>
+</component>package.xml|550|<packageDescription id="d39c1qv4" name="hudBattlePVP1">
+  <resources>
+    <component id="h0hy3" name="joystick" path="/Components/" size="400,400"/>
+    <component id="h0hy4" name="joystickCircle" path="/Components/" size="89,80"/>
+    <image id="h0hy1" name="0" path="/Resources/" size="76,77"/>
+    <image id="h0hy2" name="1" path="/Resources/" size="178,160"/>
+    <component id="el7u0" name="main" path="/Components/" size="1280,720" exported="true"/>
+    <atlas id="atlas0" size="256,256" file="atlas0.png"/>
+  </resources>
+</packageDescription>

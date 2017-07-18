@@ -15,7 +15,7 @@ namespace NUIExport
 		{
             { "basic", "UI/basic" },
             { "funcBag", "UI/funcBag" },
-            { "hudBattle", "UI/hudBattle" },
+            { "hudBattlePVP1", "UI/hudBattlePVP1" },
             { "hudHome", "UI/hudHome" },
             { "hudLogin", "UI/hudLogin" },
             { "transit", "UI/transit" },
@@ -28,7 +28,7 @@ namespace NUIExport
 		{
             NUIExport.basic.basicBinder.BindAll();
             NUIExport.funcBag.funcBagBinder.BindAll();
-            NUIExport.hudBattle.hudBattleBinder.BindAll();
+            NUIExport.hudBattlePVP1.hudBattlePVP1Binder.BindAll();
             NUIExport.hudHome.hudHomeBinder.BindAll();
             NUIExport.hudLogin.hudLoginBinder.BindAll();
             NUIExport.transit.transitBinder.BindAll();

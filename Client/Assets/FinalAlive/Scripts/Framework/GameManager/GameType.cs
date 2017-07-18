@@ -59,7 +59,7 @@ namespace NGame
 
         public override GameBase NewGame(object gameParam)
         {
-            return new GameLogin(gameParam);
+            return new GameLogin(this, gameParam);
         }
     }
 
@@ -74,7 +74,7 @@ namespace NGame
 
         public override GameBase NewGame(object gameParam)
         {
-            return new GameHome(gameParam);
+            return new GameHome(this, gameParam);
         }
     }
 
@@ -89,7 +89,22 @@ namespace NGame
 
         public override GameBase NewGame(object gameParam)
         {
-            return new GameTransit(gameParam);
+            return new GameTransit(this, gameParam);
+        }
+    }
+
+    /// <summary>
+    /// 游戏类型--PVP1
+    /// </summary>
+    public class GameTypePVP1 : GameType
+    {
+        public GameTypePVP1() : base(EGameType.Battle_PVP_1)
+        {
+        }
+
+        public override GameBase NewGame(object gameParam)
+        {
+            return new GameBattlePVP1(this, gameParam);
         }
     }
 }

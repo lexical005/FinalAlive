@@ -71,9 +71,18 @@ namespace NGame
         }
 
 
-        public GameTransit(object gameParams) : base(new GameTypeTransit())
+        public GameTransit(GameType gameType, object gameParams) : base(gameType)
         {
             this.m_TransitData = gameParams as TransitData;
+        }
+
+        /// <summary>
+        /// 场景名称
+        /// </summary>
+        /// <returns></returns>
+        public override string SceneName()
+        {
+            return "";
         }
 
         /// <summary>
@@ -167,7 +176,9 @@ namespace NGame
             this.DoTransit();
 
             // 屏蔽层淡出（不再关注淡出结束事件）
-            NFramework.UIManager.SystemShieldFadeOut(true, null);
+            NFramework.UIManager.SystemShieldFadeOut(true, delegate() {
+                Debug.Log("GameTransit.OnEnterTransit_ShieldFadeOutOver");
+            });
         }
 
         ///// <summary>

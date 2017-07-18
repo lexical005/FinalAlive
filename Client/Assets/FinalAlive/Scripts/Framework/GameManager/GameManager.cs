@@ -72,7 +72,7 @@ namespace NFramework
         /// <param name="targetGameParams"></param>
         public static void GoFirstGame()
         {
-            inst.ActiveGame(new NGame.GameLogin(null));
+            inst.ActiveGame(new NGame.GameLogin(new NGame.GameTypeLogin(), null));
         }
 
         /// <summary>
@@ -92,7 +92,7 @@ namespace NFramework
 
             var targetGame = targetGameType.NewGame(targetGameParams);
             var transitParam = NGame.GameTransit.NewTransitData(leaveTransitType, enterTransitType, targetGame);
-            inst.ActiveGame(new NGame.GameTransit(transitParam));
+            inst.ActiveGame(new NGame.GameTransit(new NGame.GameTypeTransit(), transitParam));
         }
     }
 }

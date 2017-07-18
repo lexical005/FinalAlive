@@ -11,7 +11,7 @@ namespace NUIExport.hudHome
 		public GButton m_bag;
 		public GButton m_weapon;
 		public GButton m_pet;
-		public GButton m_battle;
+		public GButton m_battlePVP1;
 
 		public const string URL = "ui://deuco6u9iuhe0";
 
@@ -32,7 +32,7 @@ namespace NUIExport.hudHome
 			m_bag = (GButton)this.GetChildAt(1);
 			m_weapon = (GButton)this.GetChildAt(2);
 			m_pet = (GButton)this.GetChildAt(3);
-			m_battle = (GButton)this.GetChildAt(4);
+			m_battlePVP1 = (GButton)this.GetChildAt(4);
 		}
 	}
 }
