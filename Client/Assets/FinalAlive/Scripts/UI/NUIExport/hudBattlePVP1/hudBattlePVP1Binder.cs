@@ -9,8 +9,9 @@ namespace NUIExport.hudBattlePVP1
 		public static void BindAll()
 		{
 			UIObjectFactory.SetPackageItemExtension(UI_main.URL, typeof(UI_main));
-			UIObjectFactory.SetPackageItemExtension(UI_joystick.URL, typeof(UI_joystick));
 			UIObjectFactory.SetPackageItemExtension(UI_joystickCircle.URL, typeof(UI_joystickCircle));
+			UIObjectFactory.SetPackageItemExtension(UI_leftJoystick.URL, typeof(UI_leftJoystick));
+			UIObjectFactory.SetPackageItemExtension(UI_rightJoystick.URL, typeof(UI_rightJoystick));
 		}
 	}
 }

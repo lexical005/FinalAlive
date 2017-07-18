@@ -7,8 +7,8 @@ namespace NUIExport.hudBattlePVP1
 {
 	public partial class UI_main : GComponent
 	{
-		public UI_joystick m_leftJoystick;
-		public UI_joystick m_rightJoystick;
+		public UI_leftJoystick m_leftJoystick;
+		public UI_rightJoystick m_rightJoystick;
 
 		public const string URL = "ui://d39c1qv4el7u0";
 
@@ -25,8 +25,8 @@ namespace NUIExport.hudBattlePVP1
 		{
 			base.ConstructFromXML(xml);
 
-			m_leftJoystick = (UI_joystick)this.GetChildAt(0);
-			m_rightJoystick = (UI_joystick)this.GetChildAt(1);
+			m_leftJoystick = (UI_leftJoystick)this.GetChildAt(0);
+			m_rightJoystick = (UI_rightJoystick)this.GetChildAt(1);
 		}
 	}
 }

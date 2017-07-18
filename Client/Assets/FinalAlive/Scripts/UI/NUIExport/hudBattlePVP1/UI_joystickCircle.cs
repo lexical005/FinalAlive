@@ -9,7 +9,7 @@ namespace NUIExport.hudBattlePVP1
 	{
 		public GImage m_circle;
 
-		public const string URL = "ui://d39c1qv4h0hy4";
+		public const string URL = "ui://d39c1qv4r0db5";
 
 		public static UI_joystickCircle CreateInstance()
 		{
