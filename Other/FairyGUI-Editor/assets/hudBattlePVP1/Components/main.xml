@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="1280,720">
+  <displayList>
+    <component id="n13_r0db" name="leftJoystick" src="r0db6" xy="0,0">
+      <relation target="" sidePair="bottom-bottom,left-left"/>
+    </component>
+    <component id="n14_r0db" name="rightJoystick" src="r0db8" xy="640,0">
+      <relation target="" sidePair="right-right,bottom-bottom"/>
+    </component>
+  </displayList>
+</component>

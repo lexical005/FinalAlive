@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<packageDescription id="d39c1qv4" jpegQuality="80" compressPNG="true">
+  <resources>
+    <component id="el7u0" name="main.xml" path="/Components/" exported="true"/>
+    <image id="h0hy1" name="0.png" path="/Resources/"/>
+    <image id="h0hy2" name="1.png" path="/Resources/"/>
+    <component id="r0db5" name="joystickCircle.xml" path="/Components/Joystick/"/>
+    <component id="r0db6" name="leftJoystick.xml" path="/Components/Joystick/"/>
+    <component id="r0db8" name="rightJoystick.xml" path="/Components/Joystick/"/>
+  </resources>
+  <publish name="hudBattlePVP1" genCode="true"/>
+</packageDescription>

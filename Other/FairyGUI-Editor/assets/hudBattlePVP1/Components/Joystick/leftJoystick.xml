@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<component size="640,720" pivot="0.5,0.5">
+  <displayList>
+    <image id="n0_r0db" name="center" src="h0hy1" xy="125,560" pivot="0.5,0.5" size="38,39"/>
+    <component id="n1_r0db" name="circle" src="r0db5" xy="100,540" pivot="0.5,0.5"/>
+  </displayList>
+</component>
