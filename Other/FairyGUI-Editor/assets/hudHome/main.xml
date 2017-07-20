@@ -17,7 +17,7 @@
       <relation target="" sidePair="bottom-bottom,right-right"/>
       <Button title="宠物"/>
     </component>
-    <component id="n10_gm03" name="battle" src="c60743" pkg="iy83z0ow" xy="563,622">
+    <component id="n10_gm03" name="battlePVP1" src="c60743" pkg="iy83z0ow" xy="563,622">
       <relation target="" sidePair="bottom-bottom,center-center"/>
       <Button title="战斗"/>
     </component>
