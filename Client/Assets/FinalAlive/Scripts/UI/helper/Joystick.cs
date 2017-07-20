@@ -44,6 +44,11 @@ namespace NUIInternal
         /// </summary>
         private Vector2 m_vector2 = Vector2.zero;
 
+        /// <summary>
+        /// 避免创建临时变量
+        /// </summary>
+        private Vector3 m_vector3 = Vector3.zero;
+
         public EventListener OnMove { get; private set; }
         public EventListener OnEnd { get; private set; }
 
@@ -213,7 +218,11 @@ namespace NUIInternal
                 m_dataJoystick.m_btnJoystickMove.x = buttonX - m_dataJoystick.m_btnJoystickMove.width / 2;
                 m_dataJoystick.m_btnJoystickMove.y = buttonY - m_dataJoystick.m_btnJoystickMove.height / 2;
 
-                this.OnMove.Call(degree);
+
+                m_vector3.x = offsetX / m_dataJoystick.m_radius;
+                m_vector3.z = -offsetY / m_dataJoystick.m_radius;
+
+                this.OnMove.Call(m_vector3);
             }
         }
     }

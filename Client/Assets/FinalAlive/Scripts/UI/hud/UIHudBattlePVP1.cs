@@ -19,6 +19,11 @@ public class UIHudBattlePVP1 : UIWindowTemplate<UIHudBattlePVP1, NUIExport.hudBa
     private NUIInternal.Joystick m_RightSightDirJoystick;
 
     /// <summary>
+    /// 测试代码，用于控制场景中的角色
+    /// </summary>
+    private CharacterUserInput m_CharacterController;
+
+    /// <summary>
     /// 私有构造
     /// </summary>
     public UIHudBattlePVP1() : base(NUIExport.hudBattlePVP1.UI_main.CreateInstance)
@@ -56,6 +61,10 @@ public class UIHudBattlePVP1 : UIWindowTemplate<UIHudBattlePVP1, NUIExport.hudBa
         m_RightSightDirJoystick = new NUIInternal.Joystick(right);
         m_RightSightDirJoystick.OnMove.Add(OnRightSightDirJoystickMove);
         m_RightSightDirJoystick.OnEnd.Add(OnRightSightDirJoystickEnd);
+
+        // 测试代码
+        GameObject RoleMan = GameObject.Find("RoleMan");
+        m_CharacterController = RoleMan.GetComponent<CharacterUserInput>();
     }
 
     /// <summary>
@@ -65,6 +74,7 @@ public class UIHudBattlePVP1 : UIWindowTemplate<UIHudBattlePVP1, NUIExport.hudBa
     void OnLeftMoveDirJoystickMove(EventContext context)
     {
         Debug.LogFormat("OnLeftMoveDirJoystickMove: {0}", context.data);
+        m_CharacterController.moveDirection = (Vector3)context.data;
     }
 
     /// <summary>
@@ -73,6 +83,7 @@ public class UIHudBattlePVP1 : UIWindowTemplate<UIHudBattlePVP1, NUIExport.hudBa
     void OnLeftMoveDirJoystickEnd()
     {
         Debug.LogFormat("OnLeftMoveDirJoystickEnd");
+        m_CharacterController.moveDirection = Vector3.zero;
     }
 
     /// <summary>
@@ -82,6 +93,7 @@ public class UIHudBattlePVP1 : UIWindowTemplate<UIHudBattlePVP1, NUIExport.hudBa
     void OnRightSightDirJoystickMove(EventContext context)
     {
         Debug.LogFormat("OnRightSightDirJoystickMove: {0}", context.data);
+        m_CharacterController.sightDirection = (Vector3)context.data;
     }
 
     /// <summary>
@@ -90,5 +102,6 @@ public class UIHudBattlePVP1 : UIWindowTemplate<UIHudBattlePVP1, NUIExport.hudBa
     void OnRightSightDirJoystickEnd()
     {
         Debug.LogFormat("OnRightSightDirJoystickEnd");
+        m_CharacterController.sightDirection = Vector3.zero;
     }
 }
