@@ -10,11 +10,10 @@ using System.Collections.Generic;
 [RequireComponent(typeof(CharacterController))]
 [AddComponentMenu("Character/Character Motor")]
 
-public class CharacterMotor : MonoBehaviour
+public class CharacterCompMotor
 {
     // Does this script currently respond to input?
     public bool canControl = true;
-    public bool useFixedUpdate = true;
 
     // For the next variables, [System.NonSerialized] tells Unity to not serialize the variable or show it in the inspector view.
     // Very handy for organization!
@@ -189,17 +188,20 @@ public class CharacterMotor : MonoBehaviour
 
     private Vector3 lastGroundNormal = Vector3.zero;
 
-    private Transform tr;
+    private Transform m_tr;
 
-    private CharacterController controller;
+    private CharacterController m_Controller;
 
-    void Awake()
+    private CharacterObject m_Character;
+
+    public CharacterCompMotor(CharacterObject character, CharacterController controller, Transform tr)
     {
-        controller = GetComponent<CharacterController>();
-        tr = transform;
+        m_Character = character;
+        m_Controller = controller;
+        m_tr = tr;
     }
 
-    private void UpdateFunction()
+    void UpdateFunction()
     {
         // We copy the actual velocity into a temporary variable that we can manipulate.
         Vector3 velocity = movement.velocity;
@@ -217,7 +219,7 @@ public class CharacterMotor : MonoBehaviour
             Vector3 newGlobalPoint = movingPlatform.activePlatform.TransformPoint(movingPlatform.activeLocalPoint);
             moveDistance = (newGlobalPoint - movingPlatform.activeGlobalPoint);
             if(moveDistance != Vector3.zero)
-                controller.Move(moveDistance);
+                m_Controller.Move(moveDistance);
 
             // Support moving platform rotation as well:
             Quaternion newGlobalRotation = movingPlatform.activePlatform.rotation * movingPlatform.activeLocalRotation;
@@ -227,19 +229,19 @@ public class CharacterMotor : MonoBehaviour
             if(yRotation != 0)
             {
                 // Prevent rotation of the local up vector
-                tr.Rotate(0, yRotation, 0);
+                m_tr.Rotate(0, yRotation, 0);
             }
         }
 
         // Save lastPosition for velocity calculation.
-        Vector3 lastPosition = tr.position;
+        Vector3 lastPosition = m_tr.position;
 
         // We always want the movement to be framerate independent.  Multiplying by Time.deltaTime does this.
         Vector3 currentMovementOffset = velocity * Time.deltaTime;
 
         // Find out how much we need to push towards the ground to avoid loosing grouning
         // when walking down a step or over a sharp change in slope.
-        float pushDownOffset = Mathf.Max(controller.stepOffset, new Vector3(currentMovementOffset.x, 0, currentMovementOffset.z).magnitude);
+        float pushDownOffset = Mathf.Max(m_Controller.stepOffset, new Vector3(currentMovementOffset.x, 0, currentMovementOffset.z).magnitude);
         if(grounded)
             currentMovementOffset -= pushDownOffset * Vector3.up;
 
@@ -248,7 +250,7 @@ public class CharacterMotor : MonoBehaviour
         groundNormal = Vector3.zero;
 
         // Move our character!
-        movement.collisionFlags = controller.Move(currentMovementOffset);
+        movement.collisionFlags = m_Controller.Move(currentMovementOffset);
 
         movement.lastHitPoint = movement.hitPoint;
         lastGroundNormal = groundNormal;
@@ -266,7 +268,7 @@ public class CharacterMotor : MonoBehaviour
         // Calculate the velocity based on the current and previous position.  
         // This means our velocity will only be the amount the character actually moved as a result of collisions.
         Vector3 oldHVelocity = new Vector3(velocity.x, 0, velocity.z);
-        movement.velocity = (tr.position - lastPosition) / Time.deltaTime;
+        movement.velocity = (m_tr.position - lastPosition) / Time.deltaTime;
         Vector3 newHVelocity = new Vector3(movement.velocity.x, 0, movement.velocity.z);
 
         // The CharacterController can be moved in unwanted directions when colliding with things.
@@ -312,10 +314,10 @@ public class CharacterMotor : MonoBehaviour
                 movement.velocity += movingPlatform.platformVelocity;
             }
 
-            SendMessage("OnFall", SendMessageOptions.DontRequireReceiver);
+            m_Character.OnFall();
             // We pushed the character down to ensure it would stay on the ground ifthere was any.
             // But there wasn't so now we cancel the downwards offset to make the fall smoother.
-            tr.position += pushDownOffset * Vector3.up;
+            m_tr.position += pushDownOffset * Vector3.up;
         }
         // We were not grounded but just landed on something
         else if(!grounded && IsGroundedTest())
@@ -323,8 +325,8 @@ public class CharacterMotor : MonoBehaviour
             grounded = true;
             jumping.jumping = false;
             SubtractNewPlatformVelocity();
-
-            SendMessage("OnLand", SendMessageOptions.DontRequireReceiver);
+            
+            m_Character.OnLand();
         }
 
         // Moving platforms support
@@ -332,16 +334,16 @@ public class CharacterMotor : MonoBehaviour
         {
             // Use the center of the lower half sphere of the capsule as reference point.
             // This works best when the character is standing on moving tilting platforms. 
-            movingPlatform.activeGlobalPoint = tr.position + Vector3.up * (controller.center.y - controller.height * 0.5f + controller.radius);
+            movingPlatform.activeGlobalPoint = m_tr.position + Vector3.up * (m_Controller.center.y - m_Controller.height * 0.5f + m_Controller.radius);
             movingPlatform.activeLocalPoint = movingPlatform.activePlatform.InverseTransformPoint(movingPlatform.activeGlobalPoint);
 
             // Support moving platform rotation as well:
-            movingPlatform.activeGlobalRotation = tr.rotation;
+            movingPlatform.activeGlobalRotation = m_tr.rotation;
             movingPlatform.activeLocalRotation = Quaternion.Inverse(movingPlatform.activePlatform.rotation) * movingPlatform.activeGlobalRotation;
         }
     }
 
-    void FixedUpdate()
+    public void OnFixedUpdate()
     {
         if(movingPlatform.enabled)
         {
@@ -350,7 +352,6 @@ public class CharacterMotor : MonoBehaviour
                 if(!movingPlatform.newPlatform)
                 {
                     // unused: Vector3 lastVelocity = movingPlatform.platformVelocity;
-
                     movingPlatform.platformVelocity = (
                         movingPlatform.activePlatform.localToWorldMatrix.MultiplyPoint3x4(movingPlatform.activeLocalPoint)
                         - movingPlatform.lastMatrix.MultiplyPoint3x4(movingPlatform.activeLocalPoint)
@@ -365,20 +366,13 @@ public class CharacterMotor : MonoBehaviour
             }
         }
 
-        if(useFixedUpdate)
-            UpdateFunction();
-    }
-
-    void Update()
-    {
-        if(!useFixedUpdate)
-            UpdateFunction();
+        UpdateFunction();
     }
 
     private Vector3 ApplyInputVelocityChange(Vector3 velocity)
     {
-        if(!canControl)
-            inputMoveDirection = Vector3.zero;
+        if (!canControl)
+            inputMoveDirection.x = inputMoveDirection.y = inputMoveDirection.z = 0;
 
         // Find desired velocity
         Vector3 desiredVelocity;
@@ -500,7 +494,7 @@ public class CharacterMotor : MonoBehaviour
                     velocity += movingPlatform.platformVelocity;
                 }
 
-                SendMessage("OnJump", SendMessageOptions.DontRequireReceiver);
+                m_Character.OnJump();
             }
             else
             {
@@ -559,7 +553,7 @@ public class CharacterMotor : MonoBehaviour
     private Vector3 GetDesiredHorizontalVelocity()
     {
         // Find desired velocity
-        Vector3 desiredLocalDirection = tr.InverseTransformDirection(inputMoveDirection);
+        Vector3 desiredLocalDirection = m_tr.InverseTransformDirection(inputMoveDirection);
         float maxSpeed = MaxSpeedInDirection(desiredLocalDirection);
         if(grounded)
         {
@@ -567,7 +561,7 @@ public class CharacterMotor : MonoBehaviour
             var movementSlopeAngle = Mathf.Asin(movement.velocity.normalized.y) * Mathf.Rad2Deg;
             maxSpeed *= movement.slopeSpeedMultiplier.Evaluate(movementSlopeAngle);
         }
-        return tr.TransformDirection(desiredLocalDirection * maxSpeed);
+        return m_tr.TransformDirection(desiredLocalDirection * maxSpeed);
     }
 
     private Vector3 AdjustGroundVelocityToNormal(Vector3 hVelocity, Vector3 groundNormal)
@@ -619,12 +613,7 @@ public class CharacterMotor : MonoBehaviour
 
     bool TooSteep()
     {
-        return (groundNormal.y <= Mathf.Cos(controller.slopeLimit * Mathf.Deg2Rad));
-    }
-
-    Vector3 GetDirection()
-    {
-        return inputMoveDirection;
+        return (groundNormal.y <= Mathf.Cos(m_Controller.slopeLimit * Mathf.Deg2Rad));
     }
 
     void SetControllable(bool controllable)
@@ -645,13 +634,5 @@ public class CharacterMotor : MonoBehaviour
             float length = new Vector3(temp.x, 0, temp.z * zAxisEllipseMultiplier).magnitude * movement.maxSidewaysSpeed;
             return length;
         }
-    }
-
-    void SetVelocity(Vector3 velocity)
-    {
-        grounded = false;
-        movement.velocity = velocity;
-        movement.frameVelocity = Vector3.zero;
-        SendMessage("OnExternalVelocity");
     }
 }

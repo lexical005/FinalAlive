@@ -8,11 +8,25 @@ namespace NUIInternal
 {
     public class JoystickData
     {
+        public enum EJoystickMode
+        {
+            /// <summary>
+            /// 方向系数 = (当前触摸位置 - 初始触摸位置) / 摇杆半径
+            /// </summary>
+            RelativeCenter,
+
+            /// <summary>
+            /// 方向系数 = 触摸位移 / 摇杆半径
+            /// </summary>
+            MoveDelta,
+        }
+
         public GComponent m_touchArea;
         public GButton m_btnJoystickMove;
         public GImage m_imgJoystickMove;
         public GImage m_imgJoystickCenter;
         public int m_radius = 150;
+        public EJoystickMode m_mode = EJoystickMode.RelativeCenter;
     }
 
     public class Joystick : EventDispatcher
@@ -23,6 +37,8 @@ namespace NUIInternal
         float _startStageY;
         float _lastStageX;
         float _lastStageY;
+        float _lastOffsetCenterX;
+        float _lastOffsetCenterY;
 
         /// <summary>
         /// 触摸id
@@ -115,6 +131,8 @@ namespace NUIInternal
                 _lastStageY = by;
                 _startStageX = bx;
                 _startStageY = by;
+                _lastOffsetCenterX = 0;
+                _lastOffsetCenterY = 0;
 
                 m_dataJoystick.m_imgJoystickCenter.visible = true;
                 m_dataJoystick.m_imgJoystickCenter.x = bx - m_dataJoystick.m_imgJoystickCenter.width / 2;
@@ -186,26 +204,26 @@ namespace NUIInternal
                 float buttonX = m_dataJoystick.m_btnJoystickMove.x + moveX;
                 float buttonY = m_dataJoystick.m_btnJoystickMove.y + moveY;
 
-                float offsetX = buttonX + m_dataJoystick.m_btnJoystickMove.width / 2 - _startStageX;
-                float offsetY = buttonY + m_dataJoystick.m_btnJoystickMove.height / 2 - _startStageY;
+                float offsetCenterX = buttonX + m_dataJoystick.m_btnJoystickMove.width / 2 - _startStageX;
+                float offsetCenterY = buttonY + m_dataJoystick.m_btnJoystickMove.height / 2 - _startStageY;
 
-                float rad = Mathf.Atan2(offsetY, offsetX);
+                float rad = Mathf.Atan2(offsetCenterY, offsetCenterX);
                 float degree = rad * 180 / Mathf.PI;
                 m_dataJoystick.m_imgJoystickMove.rotation = degree + 90;
 
                 float maxX = m_dataJoystick.m_radius * Mathf.Cos(rad);
                 float maxY = m_dataJoystick.m_radius * Mathf.Sin(rad);
-                if (Mathf.Abs(offsetX) > Mathf.Abs(maxX))
+                if (Mathf.Abs(offsetCenterX) > Mathf.Abs(maxX))
                 {
-                    offsetX = maxX;
+                    offsetCenterX = maxX;
                 }
-                if (Mathf.Abs(offsetY) > Mathf.Abs(maxY))
+                if (Mathf.Abs(offsetCenterY) > Mathf.Abs(maxY))
                 {
-                    offsetY = maxY;
+                    offsetCenterY = maxY;
                 }
 
-                buttonX = _startStageX + offsetX;
-                buttonY = _startStageY + offsetY;
+                buttonX = _startStageX + offsetCenterX;
+                buttonY = _startStageY + offsetCenterY;
                 if (buttonX < 0)
                 {
                     buttonX = 0;
@@ -218,11 +236,23 @@ namespace NUIInternal
                 m_dataJoystick.m_btnJoystickMove.x = buttonX - m_dataJoystick.m_btnJoystickMove.width / 2;
                 m_dataJoystick.m_btnJoystickMove.y = buttonY - m_dataJoystick.m_btnJoystickMove.height / 2;
 
+                if (m_dataJoystick.m_mode == JoystickData.EJoystickMode.RelativeCenter)
+                {
+                    m_vector3.x = offsetCenterX / m_dataJoystick.m_radius;
+                    m_vector3.z = -offsetCenterY / m_dataJoystick.m_radius;
 
-                m_vector3.x = offsetX / m_dataJoystick.m_radius;
-                m_vector3.z = -offsetY / m_dataJoystick.m_radius;
+                    this.OnMove.Call(m_vector3);
+                }
+                else if (m_dataJoystick.m_mode == JoystickData.EJoystickMode.MoveDelta)
+                {
+                    m_vector3.x = (offsetCenterX - _lastOffsetCenterX) / m_dataJoystick.m_radius;
+                    m_vector3.z = -(offsetCenterY - _lastOffsetCenterY) / m_dataJoystick.m_radius;
 
-                this.OnMove.Call(m_vector3);
+                    this.OnMove.Call(m_vector3);
+                }
+
+                _lastOffsetCenterX = offsetCenterX;
+                _lastOffsetCenterY = offsetCenterY;
             }
         }
     }

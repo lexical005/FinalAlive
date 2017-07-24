@@ -27,7 +27,7 @@ public class CameraFollowTarget : MonoBehaviour
     /// <summary>
     /// 摄像机跟随的目标，摄像机的视野，由跟随的目标的视野决定
     /// </summary>
-    public Character m_FollowCharacter;
+    public CharacterObject m_FollowCharacter;
 
     /// <summary>
     /// 摄像机跟随的节点，摄像机的视野的中心线，总是会经过该节点，且摄像机会保持与该节点的距离

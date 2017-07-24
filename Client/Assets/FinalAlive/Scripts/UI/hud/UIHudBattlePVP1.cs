@@ -21,7 +21,7 @@ public class UIHudBattlePVP1 : UIWindowTemplate<UIHudBattlePVP1, NUIExport.hudBa
     /// <summary>
     /// 测试代码，用于控制场景中的角色
     /// </summary>
-    private CharacterUserInput m_CharacterController;
+    private CharacterCompInput m_CharacterController;
 
     /// <summary>
     /// 私有构造
@@ -45,6 +45,7 @@ public class UIHudBattlePVP1 : UIWindowTemplate<UIHudBattlePVP1, NUIExport.hudBa
             m_imgJoystickMove = mainComp.m_leftJoystick.m_circle.m_circle,
             m_imgJoystickCenter = mainComp.m_leftJoystick.m_center,
             m_radius = 150,
+            m_mode = NUIInternal.JoystickData.EJoystickMode.RelativeCenter,
         };
         m_LeftMoveDirJoystick = new NUIInternal.Joystick(left);
         m_LeftMoveDirJoystick.OnMove.Add(OnLeftMoveDirJoystickMove);
@@ -57,6 +58,7 @@ public class UIHudBattlePVP1 : UIWindowTemplate<UIHudBattlePVP1, NUIExport.hudBa
             m_imgJoystickMove = mainComp.m_rightJoystick.m_circle.m_circle,
             m_imgJoystickCenter = mainComp.m_rightJoystick.m_center,
             m_radius = 150,
+            m_mode = NUIInternal.JoystickData.EJoystickMode.MoveDelta,
         };
         m_RightSightDirJoystick = new NUIInternal.Joystick(right);
         m_RightSightDirJoystick.OnMove.Add(OnRightSightDirJoystickMove);
@@ -64,7 +66,7 @@ public class UIHudBattlePVP1 : UIWindowTemplate<UIHudBattlePVP1, NUIExport.hudBa
 
         // 测试代码
         GameObject RoleMan = GameObject.Find("RoleMan");
-        m_CharacterController = RoleMan.GetComponent<CharacterUserInput>();
+        m_CharacterController = RoleMan.GetComponent<CharacterObject>().m_CompInput;
     }
 
     /// <summary>
