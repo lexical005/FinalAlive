@@ -1,6 +1,0 @@
-[submodule "Other/FairyGUI-unity"]
-	path = Other/FairyGUI-unity
-	url = https://github.com/lexical005/FairyGUI-unity.git
-[submodule "Other/LuaFramework_UGUI"]
-	path = Other/LuaFramework_UGUI
-	url = https://github.com/lexical005/LuaFramework_UGUI.git
