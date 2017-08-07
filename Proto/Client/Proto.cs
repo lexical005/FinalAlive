@@ -25,11 +25,11 @@ public static partial class ProtoReflection {
           "BG5hbWUYBCABKAkSEAoIYmFzZUtleXMYBSADKAUSEQoJYmFzZURhdGFzGAYg",
           "AygFIjkKEU1zZ1NlcnZlclJlZ2lzdGVyEhIKCnNlcnZlclR5cGUYASABKAkS",
           "EAoIc2VydmVySUQYAiABKAUiFAoSTXNnU2VydmVyS2VlcEFsaXZlIrIBCh9N",
-          "c2dQcmVwYXJlTG9naW5QbGF0Zm9ybVVuaXF1ZUlEEhIKCnN1YkNoYW5uZWwY",
+          "c2dQcmVwYXJlTG9naW5QbGF0Zm9ybVVuaXF1ZUlkEhIKCnN1YkNoYW5uZWwY",
           "ASABKAkSGQoRVVVJRFBsYXRmb3JtQm91bmQYAiABKAkSGQoRVVVJRFBsYXRm",
           "b3JtTG9naW4YAyABKAkSEgoKcmFuZG9tU2FsdBgEIAEoCRIRCgl0aW1lc3Rh",
           "bXAYBSABKAUSDgoGc3RhdHVzGAYgASgFEg4KBnJlc3VsdBgHIAEoBSJmChhN",
-          "c2dMb2dpblBsYXRmb3JtVW5pcXVlSUQSEwoLdG9rZW5DdXN0b20YASABKAkS",
+          "c2dMb2dpblBsYXRmb3JtVW5pcXVlSWQSEwoLdG9rZW5DdXN0b20YASABKAkS",
           "EgoKZGV2aWNlR1VJRBgCIAEoCRIRCglVVUlETG9naW4YAyABKAQSDgoGcmVz",
           "dWx0GAQgASgFImgKGE1zZ0xvZ2luUGxhdGZvcm1TaWRUb2tlbhIVCg10b2tl",
           "blBsYXRmb3JtGAEgASgJEhIKCmRldmljZUdVSUQYAiABKAkSEQoJVVVJRExv",
@@ -40,8 +40,8 @@ public static partial class ProtoReflection {
           "DgoGcmVzdWx0GAMgASgFIhQKEk1zZ0FnZW50RGlzQ29ubmVjdCIeCgxNc2dL",
           "ZWVwQWxpdmUSDgoGbnVtYmVyGAEgASgFKt0BCgtNZXNzYWdlVHlwZRISCg5T",
           "ZXJ2ZXJSZWdpc3RlchAAEhMKD1NlcnZlcktlZXBBbGl2ZRABEiAKHFByZXBh",
-          "cmVMb2dpblBsYXRmb3JtVW5pcXVlSUQQAhIZChVMb2dpblBsYXRmb3JtVW5p",
-          "cXVlSUQQAxIZChVMb2dpblBsYXRmb3JtU2lkVG9rZW4QBBILCgdSZUxvZ2lu",
+          "cmVMb2dpblBsYXRmb3JtVW5pcXVlSWQQAhIZChVMb2dpblBsYXRmb3JtVW5p",
+          "cXVlSWQQAxIZChVMb2dpblBsYXRmb3JtU2lkVG9rZW4QBBILCgdSZUxvZ2lu",
           "EAUSCAoES2ljaxAGEhIKDkVudGVyR2FtZVdvcmxkEAcSEwoPQWdlbnREaXND",
           "b25uZWN0EAgSDQoJS2VlcEFsaXZlEAliBnByb3RvMw=="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
@@ -50,8 +50,8 @@ public static partial class ProtoReflection {
           new pbr::GeneratedClrTypeInfo(typeof(global::StAccountData), global::StAccountData.Parser, new[]{ "IsFirst", "ServerTime", "ServerZone", "Name", "BaseKeys", "BaseDatas" }, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::MsgServerRegister), global::MsgServerRegister.Parser, new[]{ "ServerType", "ServerID" }, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::MsgServerKeepAlive), global::MsgServerKeepAlive.Parser, null, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::MsgPrepareLoginPlatformUniqueID), global::MsgPrepareLoginPlatformUniqueID.Parser, new[]{ "SubChannel", "UUIDPlatformBound", "UUIDPlatformLogin", "RandomSalt", "Timestamp", "Status", "Result" }, null, null, null),
-          new pbr::GeneratedClrTypeInfo(typeof(global::MsgLoginPlatformUniqueID), global::MsgLoginPlatformUniqueID.Parser, new[]{ "TokenCustom", "DeviceGUID", "UUIDLogin", "Result" }, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::MsgPrepareLoginPlatformUniqueId), global::MsgPrepareLoginPlatformUniqueId.Parser, new[]{ "SubChannel", "UUIDPlatformBound", "UUIDPlatformLogin", "RandomSalt", "Timestamp", "Status", "Result" }, null, null, null),
+          new pbr::GeneratedClrTypeInfo(typeof(global::MsgLoginPlatformUniqueId), global::MsgLoginPlatformUniqueId.Parser, new[]{ "TokenCustom", "DeviceGUID", "UUIDLogin", "Result" }, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::MsgLoginPlatformSidToken), global::MsgLoginPlatformSidToken.Parser, new[]{ "TokenPlatform", "DeviceGUID", "UUIDLogin", "Result" }, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::MsgReLogin), global::MsgReLogin.Parser, new[]{ "CheckData", "DeviceGUID", "Result" }, null, null, null),
           new pbr::GeneratedClrTypeInfo(typeof(global::MsgKick), global::MsgKick.Parser, new[]{ "Result" }, null, null, null),
@@ -67,8 +67,8 @@ public static partial class ProtoReflection {
 public enum MessageType {
   [pbr::OriginalName("ServerRegister")] ServerRegister = 0,
   [pbr::OriginalName("ServerKeepAlive")] ServerKeepAlive = 1,
-  [pbr::OriginalName("PrepareLoginPlatformUniqueID")] PrepareLoginPlatformUniqueId = 2,
-  [pbr::OriginalName("LoginPlatformUniqueID")] LoginPlatformUniqueId = 3,
+  [pbr::OriginalName("PrepareLoginPlatformUniqueId")] PrepareLoginPlatformUniqueId = 2,
+  [pbr::OriginalName("LoginPlatformUniqueId")] LoginPlatformUniqueId = 3,
   [pbr::OriginalName("LoginPlatformSidToken")] LoginPlatformSidToken = 4,
   [pbr::OriginalName("ReLogin")] ReLogin = 5,
   [pbr::OriginalName("Kick")] Kick = 6,
@@ -560,10 +560,10 @@ public sealed partial class MsgServerKeepAlive : pb::IMessage<MsgServerKeepAlive
 
 }
 
-public sealed partial class MsgPrepareLoginPlatformUniqueID : pb::IMessage<MsgPrepareLoginPlatformUniqueID> {
-  private static readonly pb::MessageParser<MsgPrepareLoginPlatformUniqueID> _parser = new pb::MessageParser<MsgPrepareLoginPlatformUniqueID>(() => new MsgPrepareLoginPlatformUniqueID());
+public sealed partial class MsgPrepareLoginPlatformUniqueId : pb::IMessage<MsgPrepareLoginPlatformUniqueId> {
+  private static readonly pb::MessageParser<MsgPrepareLoginPlatformUniqueId> _parser = new pb::MessageParser<MsgPrepareLoginPlatformUniqueId>(() => new MsgPrepareLoginPlatformUniqueId());
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public static pb::MessageParser<MsgPrepareLoginPlatformUniqueID> Parser { get { return _parser; } }
+  public static pb::MessageParser<MsgPrepareLoginPlatformUniqueId> Parser { get { return _parser; } }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public static pbr::MessageDescriptor Descriptor {
@@ -576,14 +576,14 @@ public sealed partial class MsgPrepareLoginPlatformUniqueID : pb::IMessage<MsgPr
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public MsgPrepareLoginPlatformUniqueID() {
+  public MsgPrepareLoginPlatformUniqueId() {
     OnConstruction();
   }
 
   partial void OnConstruction();
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public MsgPrepareLoginPlatformUniqueID(MsgPrepareLoginPlatformUniqueID other) : this() {
+  public MsgPrepareLoginPlatformUniqueId(MsgPrepareLoginPlatformUniqueId other) : this() {
     subChannel_ = other.subChannel_;
     uUIDPlatformBound_ = other.uUIDPlatformBound_;
     uUIDPlatformLogin_ = other.uUIDPlatformLogin_;
@@ -594,8 +594,8 @@ public sealed partial class MsgPrepareLoginPlatformUniqueID : pb::IMessage<MsgPr
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public MsgPrepareLoginPlatformUniqueID Clone() {
-    return new MsgPrepareLoginPlatformUniqueID(this);
+  public MsgPrepareLoginPlatformUniqueId Clone() {
+    return new MsgPrepareLoginPlatformUniqueId(this);
   }
 
   /// <summary>Field number for the "subChannel" field.</summary>
@@ -677,11 +677,11 @@ public sealed partial class MsgPrepareLoginPlatformUniqueID : pb::IMessage<MsgPr
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public override bool Equals(object other) {
-    return Equals(other as MsgPrepareLoginPlatformUniqueID);
+    return Equals(other as MsgPrepareLoginPlatformUniqueId);
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public bool Equals(MsgPrepareLoginPlatformUniqueID other) {
+  public bool Equals(MsgPrepareLoginPlatformUniqueId other) {
     if (ReferenceEquals(other, null)) {
       return false;
     }
@@ -776,7 +776,7 @@ public sealed partial class MsgPrepareLoginPlatformUniqueID : pb::IMessage<MsgPr
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public void MergeFrom(MsgPrepareLoginPlatformUniqueID other) {
+  public void MergeFrom(MsgPrepareLoginPlatformUniqueId other) {
     if (other == null) {
       return;
     }
@@ -845,10 +845,10 @@ public sealed partial class MsgPrepareLoginPlatformUniqueID : pb::IMessage<MsgPr
 
 }
 
-public sealed partial class MsgLoginPlatformUniqueID : pb::IMessage<MsgLoginPlatformUniqueID> {
-  private static readonly pb::MessageParser<MsgLoginPlatformUniqueID> _parser = new pb::MessageParser<MsgLoginPlatformUniqueID>(() => new MsgLoginPlatformUniqueID());
+public sealed partial class MsgLoginPlatformUniqueId : pb::IMessage<MsgLoginPlatformUniqueId> {
+  private static readonly pb::MessageParser<MsgLoginPlatformUniqueId> _parser = new pb::MessageParser<MsgLoginPlatformUniqueId>(() => new MsgLoginPlatformUniqueId());
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public static pb::MessageParser<MsgLoginPlatformUniqueID> Parser { get { return _parser; } }
+  public static pb::MessageParser<MsgLoginPlatformUniqueId> Parser { get { return _parser; } }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public static pbr::MessageDescriptor Descriptor {
@@ -861,14 +861,14 @@ public sealed partial class MsgLoginPlatformUniqueID : pb::IMessage<MsgLoginPlat
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public MsgLoginPlatformUniqueID() {
+  public MsgLoginPlatformUniqueId() {
     OnConstruction();
   }
 
   partial void OnConstruction();
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public MsgLoginPlatformUniqueID(MsgLoginPlatformUniqueID other) : this() {
+  public MsgLoginPlatformUniqueId(MsgLoginPlatformUniqueId other) : this() {
     tokenCustom_ = other.tokenCustom_;
     deviceGUID_ = other.deviceGUID_;
     uUIDLogin_ = other.uUIDLogin_;
@@ -876,8 +876,8 @@ public sealed partial class MsgLoginPlatformUniqueID : pb::IMessage<MsgLoginPlat
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public MsgLoginPlatformUniqueID Clone() {
-    return new MsgLoginPlatformUniqueID(this);
+  public MsgLoginPlatformUniqueId Clone() {
+    return new MsgLoginPlatformUniqueId(this);
   }
 
   /// <summary>Field number for the "tokenCustom" field.</summary>
@@ -926,11 +926,11 @@ public sealed partial class MsgLoginPlatformUniqueID : pb::IMessage<MsgLoginPlat
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
   public override bool Equals(object other) {
-    return Equals(other as MsgLoginPlatformUniqueID);
+    return Equals(other as MsgLoginPlatformUniqueId);
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public bool Equals(MsgLoginPlatformUniqueID other) {
+  public bool Equals(MsgLoginPlatformUniqueId other) {
     if (ReferenceEquals(other, null)) {
       return false;
     }
@@ -998,7 +998,7 @@ public sealed partial class MsgLoginPlatformUniqueID : pb::IMessage<MsgLoginPlat
   }
 
   [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-  public void MergeFrom(MsgLoginPlatformUniqueID other) {
+  public void MergeFrom(MsgLoginPlatformUniqueId other) {
     if (other == null) {
       return;
     }

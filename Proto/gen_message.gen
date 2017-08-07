@@ -22,7 +22,7 @@
     /* 客户端通过唯一字符串准备登录, 目前应用于: GameCenter, GooglePlay */
     /* 唯一字符串来源: 如 GameCenter, GooglePlay 账号返回的唯一字符串*/
     /*C->S, S->C*/
-    @MsgPrepareLoginPlatformUniqueID
+    @MsgPrepareLoginPlatformUniqueId
         /*C->S*/
         /*subChannel: 子渠道, 特定渠道可能会再次分发给多个特定渠道来运营*/
         string subChannel
@@ -61,7 +61,7 @@
 
     /* 客户端通过唯一字符串登录, 目前应用于: GameCenter, GooglePlay */
     /*C->S, S->C*/
-    @MsgLoginPlatformUniqueID
+    @MsgLoginPlatformUniqueId
         /*C->S*/
         string tokenCustom      /*自定义实现的双端校验登陆有效性的token*/
         string deviceGUID       /*设备唯一标识*/

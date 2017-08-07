@@ -124,14 +124,16 @@ def save_go():
 	f.close()
 
 def save_csharp():
-	t_header = '''
+	t_header = '''using System.Collections.Generic;
+
 public partial class Message
 {
 \tprivate delegate Google.Protobuf.IMessage MessageCreator(byte[] data, int offset, int length);
 	'''
 
 	t_type_header = '''
-\tprivate static readonly Dictionary<MessageType, MessageCreator> s_mapMessageCreator = new Dictionary<MessageType, MessageCreator>
+\t// 如果发送MessageType定义不存在, 则重新修改gen_message.gen中的命名, 可参考Proto.cs中关于MessageType的定义
+\tprivate static readonly Dictionary<int, MessageType> s_mapMessageType = new Dictionary<int, MessageType>
 \t{'''
 
 	t_type_loop = '''\n\t\t{ %s, MessageType.%s },'''
@@ -142,7 +144,7 @@ public partial class Message
 \tprivate static readonly Dictionary<int, MessageCreator> s_mapMessageCreator = new Dictionary<int, MessageCreator>
 \t{'''
 
-	t_creator_loop = '''\n\t\t{ %s, delegate (byte[] data, int offset, int length) { return %s.Parser.ParseFrom(data, offset, length); } },'''
+	t_creator_loop = '''\n\t\t{ %s, delegate (byte[] data, int offset, int length) { return Msg%s.Parser.ParseFrom(data, offset, length); } },'''
 
 	t_creator_tail = '''\n\t};\n'''
 

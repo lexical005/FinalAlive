@@ -13,8 +13,8 @@ message StAccountData{
 enum MessageType {
 	ServerRegister = 0;
 	ServerKeepAlive = 1;
-	PrepareLoginPlatformUniqueID = 2;
-	LoginPlatformUniqueID = 3;
+	PrepareLoginPlatformUniqueId = 2;
+	LoginPlatformUniqueId = 3;
 	LoginPlatformSidToken = 4;
 	ReLogin = 5;
 	Kick = 6;
@@ -31,7 +31,7 @@ message MsgServerRegister{
 message MsgServerKeepAlive{
 }
 
-message MsgPrepareLoginPlatformUniqueID{
+message MsgPrepareLoginPlatformUniqueId{
 	string subChannel = 1;
 	string UUIDPlatformBound = 2;
 	string UUIDPlatformLogin = 3;
@@ -41,7 +41,7 @@ message MsgPrepareLoginPlatformUniqueID{
 	int32 result = 7;
 }
 
-message MsgLoginPlatformUniqueID{
+message MsgLoginPlatformUniqueId{
 	string tokenCustom = 1;
 	string deviceGUID = 2;
 	uint64 UUIDLogin = 3;
