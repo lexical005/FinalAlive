@@ -123,6 +123,46 @@ def save_go():
 	f.write(text)
 	f.close()
 
+def save_csharp():
+	t_header = '''
+public partial class Message
+{
+\tprivate delegate Google.Protobuf.IMessage MessageCreator(byte[] data, int offset, int length);
+	'''
+
+	t_type_header = '''
+\tprivate static readonly Dictionary<MessageType, MessageCreator> s_mapMessageCreator = new Dictionary<MessageType, MessageCreator>
+\t{'''
+
+	t_type_loop = '''\n\t\t{ %s, MessageType.%s },'''
+
+	t_type_tail = '''\n\t};\n'''
+
+	t_creator_header = '''
+\tprivate static readonly Dictionary<int, MessageCreator> s_mapMessageCreator = new Dictionary<int, MessageCreator>
+\t{'''
+
+	t_creator_loop = '''\n\t\t{ %s, delegate (byte[] data, int offset, int length) { return %s.Parser.ParseFrom(data, offset, length); } },'''
+
+	t_creator_tail = '''\n\t};\n'''
+
+	t_tail = '''}\n'''
+
+	text = t_header
+	text += t_type_header
+	for id, mt in enumerate(msg_types):
+		text += t_type_loop % (id, mt)
+	text += t_type_tail
+	text += t_creator_header
+	for id, mt in enumerate(msg_types):
+		text += t_creator_loop % (id, mt)
+	text += t_creator_tail
+	text += t_tail
+
+	f = open('Client/Message.cs', 'w+')
+	f.write(text)
+	f.close()
+
 def saveoutput(text):
 	global message_proto_header
 	proto_header = 'syntax = "proto3";\n\n'
@@ -146,4 +186,5 @@ if __name__ == '__main__':
 	print('\n')
 
 	save_go()
+	save_csharp()
 	print('\n')
